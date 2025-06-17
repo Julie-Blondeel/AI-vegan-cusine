@@ -1,3 +1,16 @@
+@media(max-width:600px){
+    .container {
+        margin: 40px 20px;
+    }
+    form, recipe {
+        width: 100%;
+    }
+    .submit-button {
+        width:100%;
+        margin: 10px 0 0 0;
+    }
+}
+    
 body {
     background-color: #a5dcb2;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -46,7 +59,7 @@ form {
 
 .submit-button {
     margin-left: 10px;
-    background: #7baa8f;
+    background: #608b72;
     color: aliceblue;
     border: non;
     width: 150px;
@@ -54,6 +67,12 @@ form {
     border-radius: 50px;
     font-size: 16px;
     padding: 14px 25px;
+}
+
+inputfocus,
+.submit-button:focus {
+    outline: 2px solid #77ba8f;
+    outline-offset: 4px;
 }
 
 .recipe {
