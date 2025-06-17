@@ -84,6 +84,10 @@ inputfocus,
     box-shadow: 0px 20px 60px rgba(38, 83, 66, 0.03);
 }
 
+.recipe strong {
+    color: #77ba8f;
+}
+
 footer {
   text-align: center;
   font-size: 13px;
