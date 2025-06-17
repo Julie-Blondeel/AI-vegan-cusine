@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <link rel = "stylesheet"href="src/style.css" />
     <title>AI Vegan cusine generator</title>
 </head>
@@ -14,18 +15,11 @@
     </header>
 
     <main>
-        <form>
+        <form id ="recipe-generator-form">
         <input type = "text" placeholder="Enter the product for the cusine" autofocus required autocomplete="off" class="instructions" />
         <input type = "submit" class="submit-button" />
         </form>
-        <div class="recipe">
-            The recipe will go here
-        <br />
-        The Coconut Rice Bowl. You can adapt it to seasonal veggies and use whatever protein you prefer!
-        Here we are using tofu as our protein along with asparagus and peas in honor of Springtime. The rice is rich and
-        delicious, cooked in coconut milk with a little curry powder giving it gorgeous color and warm flavor undertones without
-        being overpowering. While the rice cooks, the tofu and veggies are prepped, seared, and sautéed.
-        </div>
+        <div class="recipe" id="recipe"></div>
     </main>
  
  <footer>
