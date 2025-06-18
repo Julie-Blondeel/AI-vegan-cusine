@@ -19,6 +19,10 @@ function generateRecipe(event) {
     let context = "You are smart and sweet expert in cusine who love to create short and easy vegan recipes. Your mission is to generate an easy and short vegan recipe in basic HTML and separate each line with a <br />_. Make sure to fallow the user instructions";
     let apiURL = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
 
+    let recipeElement = document.querySelector("#recipe");
+    recipeElement.classList.remove("hidden");
+    recipeElement.innerHTML = `<div class="generating">⌛ Generating Vegan recipe with ${instructionsInput.value}👌</div>`;
+
     console.log("Generating recipe");
     console.log(`Prompt: ${prompt}`);
     console.log(`Context: ${context}`);
