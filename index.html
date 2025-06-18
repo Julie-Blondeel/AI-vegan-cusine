@@ -21,6 +21,12 @@
         <input type = "text" placeholder="Enter the product for the cusine" autofocus required autocomplete="off" class="instructions" id="user-instructions" />
         <input type = "submit" class="submit-button" />
         </form> 
+
+        <div class = "button-row">
+            <button id="next-recipe-button">Next recipe</button>
+            <button id ="download-pdf-button">Save in pdf</button>
+        </div>
+
         <div class="hint"> i.e.: Banana, Apple or Rice </div>
         </div>
         <div class="recipe hidden" id="recipe"></div>
@@ -32,5 +38,7 @@
 
  </div>
  <script src = "src/index.js"></script> 
+ <script
+ src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 </body>
 </html>

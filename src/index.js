@@ -33,3 +33,35 @@ function generateRecipe(event) {
 
 let recipeFormElement = document.querySelector("#recipe-generator-form");
 recipeFormElement.addEventListener("submit", generateRecipe);
+
+document.getElementById("next-recipe-button").addEventListener("click", function() {
+    document.querySelector("form").dispatchEvent(new Event("submit"));
+});
+
+document.getElementById("download-pdf-button").addEventListener("click", function () {
+    const recipeElement = document.querySelector(".recipe");
+    
+    if (recipeElement) {
+        const hadHidden =
+            recipeElement.classList.contains("hidden");
+        
+        if (hadHidden) {
+            recipeElement.classList.remove("hidden");
+        }
+
+        const opt = {
+            margin: 0.5,
+            filename: 'vegan_recipe.pdf',
+            image: {type:'jpeg', quality: 0.98},
+            html2canvas: {scale: 2},
+            jsPDF: {unit:'in', format:'letter', orientation:'portrait'}
+        };
+
+        html2pdf().set(opt).from(recipeElement).save().then(() =>
+        {
+            if (hadHidden){
+                recipeElement.classList.add("hidden");
+            }
+        });
+    }
+});
